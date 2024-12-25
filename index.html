@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #110404;
+        }
+
+        .container {
+            margin: 50px;
+            padding: 20px;
+            background: #ffffff;
+        }
+
+        button {
+            margin: 20px;
+            background-color: #fff700;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #ff026b;
+        }
+
+        .result {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Addition of Two Numbers</h1>
+        <p>Enter the nos:</p>
+        <input id="num1" type="number" >
+        <input id="num2" type="number" >
+
+        <div>
+            <button onclick="calculateSum()">Add</button>
+        </div>
+
+        <div class="result" id="result"> </div>
+    </div>
+    <script>
+        function calculateSum() {
+            // Convert input directly to a number
+            const num1 = +document.getElementById('num1').value; 
+            const num2 = +document.getElementById('num2').value;
+
+            // Display the sum in the result div
+            document.getElementById('result').innerHTML = "Sum: " + (num1 + num2);
+        }
+    </script>
+</body>
+</html>
